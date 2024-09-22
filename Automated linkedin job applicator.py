@@ -21,4 +21,16 @@ signin_button_final.click()
 apply_button=driver.find_element(By.ID,value='ember56')
 apply_button.click()
 
+time.sleep(5)
+phone = driver.find_element(by=By.CSS_SELECTOR, value="input[id*=phoneNumber]")
+if phone.text == "":
+    phone.send_keys("8555017639")
+
+next_button = driver.find_element(By.CSS_SELECTOR, value=".artdeco-button")
+next_button.click()
+
+discard_button = driver.find_element(By.ID, value="ember429")
+discard_button.click()
+# I AM DISCARDING IT BECAUSE IT IS JUST FOR TRIAL
+
 driver.quit()
